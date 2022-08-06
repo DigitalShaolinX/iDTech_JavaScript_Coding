@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function addParagraph(){
+                const story = document.getElementById("myinput").value;
+                const textNode = document.createTextNode(story);
+                const newPTag = document.createElement("p");
+                newPTag.appendChild(textNode);
+                
+                const pList = document.getElementById("WriteStory");
+                pList.appendChild(newPTag);
+                document.getElementById("myinput").value = "";
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>My Story!</h1>
+            <textarea id="myinput"></textarea>
+            <button onclick = "addParagraph()">Add</button>
+        </div>
+        <div id="WriteStory"></div>
+    </body>
+</html>
